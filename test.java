@@ -10,7 +10,7 @@ public class test {
         Scanner input = new Scanner(System.in);
 
         do {
-        System.out.println("\n1-Find the minimum number and the maximum of the array\n2-Find the average of the array\n3-Find the sum of elements with odd and even numbered indexes\n0-Exit!\n");
+        System.out.println("\n1-Find the minimum number and the maximum of the array\n2-Find the average of the array\n3-Find the sum of elements with odd and even numbered indexes\n4-Find and display the difference between each element and the sum of the array\n0-Exit!\n");
         option = input.nextInt();
         if (option == 1) {
             System.out.println( findMin() + "&" + findMax() );
@@ -21,6 +21,9 @@ public class test {
         }
         else if (option == 3) {
             System.out.println("3");
+        }
+        else if (option == 4) {
+          System.out.println("4");
         }
     }while(option != 0 );
         if (option == 0) {
@@ -57,6 +60,26 @@ public class test {
             }
         }
         return max;
+
+    }
+
+    public static void avgDifference(int[] array) {
+      int sum = 0;
+      int avg;
+      
+      for (int i = 0; i < array.length ; i++){
+        sum += array[i];
+      }
+      
+      avg = sum / array.length;
+      
+      System.out.println("{");
+      
+      for ( int i = 0; i < array.length ; i++){
+      System.out.print(avg - array[i]);
+      }
+      
+      System.out.print("{");
 
     }
 
