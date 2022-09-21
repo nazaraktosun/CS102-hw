@@ -10,25 +10,28 @@ public class test {
         Scanner input = new Scanner(System.in);
 
         do {
-        System.out.println("\n1-Find the minimum number and the maximum of the array\n2-Find the average of the array\n3-Find the sum of elements with odd and even numbered indexes\n4-Find and display the difference between each element and the sum of the array\n0-Exit!\n");
+        System.out.println("\n1-Find the minimum number and the maximum of the array\n2-Find the average of the array\n3-Find the sum of elements with odd and even numbered indexes\n0-Exit!"); //\n4-Find and display the difference between each element and the sum of the array
         option = input.nextInt();
         if (option == 1) {
-            System.out.println( findMin() + "&" + findMax() );
+            System.out.println( findMin() + " & " + findMax() );
 
         } 
         else if (option == 2) {
-            System.out.println("2");
+            avgDifference(array);
         }
         else if (option == 3) {
-            System.out.println("3");
+           sum();
         }
-        else if (option == 4) {
+       /*  else if (option == 4) {
           System.out.println("4");
         }
+        */
+        
     }while(option != 0 );
         if (option == 0) {
             System.out.println("Goodbye!");
         }
+        input.close();
         
     }
 
@@ -83,7 +86,6 @@ public class test {
 
     }
 
-
     public static void sum(){
         int evenSum=0;
         int oddSum=0;
@@ -98,3 +100,6 @@ public class test {
         System.out.println("The sum of the odd indexes is: " + oddSum);
 
     }
+
+}
+
