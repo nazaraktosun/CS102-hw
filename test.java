@@ -1,9 +1,8 @@
 import java.util.Scanner;
 
 
-int[] Array = new int[]{ 1,2,3,4,5,6,7,8,9,10 };
-
 public class test {
+    static int[] array = new int[]{ 12,3,64,52,6,17,8,94,10 };
     
     public static void main(String[] args) {
 
@@ -13,23 +12,24 @@ public class test {
         do {
         System.out.println("\n1-Find the minimum number and the maximum of the array\n2-Find the average of the array\n3-Find the sum of elements with odd and even numbered indexes\n0-Exit!\n");
         option = input.nextInt();
-        } while (option !=0);
         if (option == 1) {
-            System.out.println("1");
+            System.out.println( findMin() + "&" + findMax() );
+
         } 
-        if (option == 2) {
+        else if (option == 2) {
             System.out.println("2");
         }
-        if (option == 3) {
+        else if (option == 3) {
             System.out.println("3");
         }
+    }while(option != 0 );
         if (option == 0) {
             System.out.println("Goodbye!");
         }
         
     }
 
-    public static void findMin(){
+    public static int findMin(){
 
         int min = array[0];
 
@@ -37,15 +37,17 @@ public class test {
 
             if( array[i] < min ){
 
-                min = array[i];
+               min = array[i];
 
             }
+
         }
+        return min;
     }
 
-    public static void findMax(){
+    public static int findMax(){
 
-        int max;
+        int max =0;
         
         for ( int i = 0; i < array.length ; i++ ){
 
@@ -54,6 +56,7 @@ public class test {
                 max = array[i];
             }
         }
+        return max;
 
     }
 
