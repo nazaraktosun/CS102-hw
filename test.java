@@ -57,4 +57,18 @@ public class test {
 
     }
 
+
+    public static void sum(){
+        int evenSum=0;
+        int oddSum=0;
+        for(int i= 0; i< array.length; i=i+2){
+            evenSum += array[i];
+        }
+        System.out.println("The sum of even indexes is: " + evenSum);
+
+        for(int i= 1; i< array.length; i =i+2){
+            oddSum += array[i];
+        }
+        System.out.println("The sum of the odd indexes is: " + oddSum);
+
     }
